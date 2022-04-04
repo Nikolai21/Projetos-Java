@@ -5,8 +5,8 @@ public abstract class EstoqueGeral {
 	private static double valorTotalEstoque;	
 	private static int quantidadeTotalPallets;
 	private static int quantidadeTotalCaixas;
-	private static int quantidadeSaidas;
-	private static int quantidadeEntradas;
+	private static int contadorSaidas;
+	private static int contadorEntradas;
 	
 	protected void setValorEstoque (double valor) {
 		valorTotalEstoque += valor;
@@ -32,20 +32,20 @@ public abstract class EstoqueGeral {
 		return quantidadeTotalCaixas;
 	}
 	
-	protected static void setQuantidadeSaidas(int saida) {
-		quantidadeSaidas += saida;
+	protected static void contadorSaidaDoEstoque(int saida) {
+		contadorSaidas += saida;
 	}
 
 	public static int getQuantidadeSaidas() {
-		return quantidadeSaidas;
+		return contadorSaidas;
 	}
 	
-	protected static void setQuantidadeEntradas(int entrada) {
-		quantidadeEntradas += entrada;
+	protected static void contadorEntradaNoEstoque(int entrada) {
+		contadorEntradas += entrada;
 	}
 	
 	public static int getQuantidadeEntradas() {
-		return quantidadeEntradas;
+		return contadorEntradas;
 	}
 	
 }
